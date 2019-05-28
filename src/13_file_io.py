@@ -9,6 +9,11 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Print all the contents of the file, then close the file
 
 # YOUR CODE HERE
+import os 
+path = os.path.dirname(os.path.realpath(__file__))
+foo = open(f"{path}/foo.txt", "r")
+print(os.getcwd())
+print(foo.read())
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
@@ -16,3 +21,7 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+bar = open(f"{path}/bar.txt", "w")
+bar.write("This is content\nThis is another line of content")
+bar.close()
+
