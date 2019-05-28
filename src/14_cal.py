@@ -22,3 +22,11 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+today = datetime.today()
+month = int(sys.argv[1]) if len(sys.argv)>=2 else today.month
+year = int(sys.argv[2]) if len(sys.argv)>=3 else today.year
+
+if len(sys.argv)>3:
+  print("Please supply your input in the format: script.py month year")
+else: print(calendar.TextCalendar(0).formatmonth(year, month))
