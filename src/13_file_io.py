@@ -11,7 +11,6 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # YOUR CODE HERE
 import os
 path = os.path.dirname(os.path.realpath(__file__))
-print(sys.argv[0])
 foo = open(f"{path}/foo.txt", "r")
 print(foo.read())
 
