@@ -9,10 +9,10 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Print all the contents of the file, then close the file
 
 # YOUR CODE HERE
-import os 
+import os
 path = os.path.dirname(os.path.realpath(__file__))
+print(sys.argv[0])
 foo = open(f"{path}/foo.txt", "r")
-print(os.getcwd())
 print(foo.read())
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
